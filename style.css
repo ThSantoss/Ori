@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'zonapro';
+  src: url('ZonaPro-Bold.otf') format('opentype'),
+    url('ZonaPro-Thin.otf') format('opentype');
+}
+
+body {
+  background: linear-gradient(90deg, rgba(32,51,155,0.3) 0%, rgba(9,9,121,0.3) 35%, rgba(81,0,255,0.3) 100%) ,url(./img/borrado.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin: 0 100px;
+  padding: 15px;
+  font-family: 'zonapro';
+  z-index: -1;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.header {
+  display: flex;
+  justify-content: start;
+}
+
+.header_menu li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease;
+
+}
+.header_menu li a:hover {
+  text-shadow: 0 0 0.3em #0092ff, 0 0 0.3em #0092ff;
+}
+
+.header_menu li {
+  display: inline-block;
+  margin: 20px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+
+main {
+  display:grid;
+  grid-template-columns:  1fr 1fr; 
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 0 ;
+    height: 1380px;
+  }
+  header {
+    flex-direction: column;
+    gap: 40px;
+    padding: 15px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+h1 {
+  font-size: 4rem;
+  max-width: 450px;
+  text-transform: uppercase;
+  font-family: 'Righteous', cursive; 
+  letter-spacing: .05rem;
+  text-shadow: 0 0 0.3em #0091ff79, 0 0 0.3em #0091ff79;
+}
+
+
+p {
+  color: #fffeff;
+  line-height: 30px;
+  max-width: 420px;
+  margin-top: -30px;
+
+}
+
+.comprar {
+  background-color: #0091ff;
+  color: #fff;
+  font-size: 15px;
+  margin: 8px 5px;
+  padding: 10px 60px;
+  border: 2px solid;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  animation: 0.3s ease;
+}
+
+.comprar:hover {
+  border: 2px solid #080808;
+  filter: brightness(80%);
+}
+
+.jogar  {
+  background-color: #0091ff;
+  color: #fff;
+  font-size: 15px;
+  margin: 8px 5px;
+  padding: 10px 60px;
+  border: 2px solid;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  animation: 0.3s ease;
+}
+.jogar:hover {
+  opacity: 0.2 ;
+  background-color: #fff;
+  border-radius: 2px solid #fff;
+  color:#080808;
+
+}
+
+.plataforma {
+  padding: 0;
+}
+
+
+.plataforma li {
+  display: inline-block;
+}
+
+.plataforma li img {
+  width: 35px;
+}
+
+.fundo  {
+  
+  background: url(./img/ori-fundo.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  background-position:center;
+  position: relative;
+  animation: fundoOri 4s forwards 1s alternate infinite ease;
+}
+
+.ori {
+  width: 100%;
+  position: relative;
+  top: 30%;
+  animation: moveOri 4s forwards alternate infinite ease;
+
+}
+
+@keyframes moveOri{
+  from {
+transform: translate(-30px, -15px);
+}
+  to {
+transform: translate(0, 0);
+}
+}
+
+@keyframes fundoOri{
+  from {
+transform: translate(50px, 20px);
+}
+  to {
+transform: translate(0, 0);
+}
+}
+
+
+@media (max-width:800px){
+  @keyframes moveOri{
+    from {
+  transform: translate(-13px, -10px);
+  }
+    to {
+  transform: translate(0, 0);
+  }
+  }
+  
+  @keyframes fundoOri{
+    from {
+  transform: translate(12px, 10px);
+  }
+    to {
+  transform: translate(0, 0);
+  }
+  }
+  
+
+}
+
+

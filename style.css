@@ -61,7 +61,7 @@ main {
 @media (max-width: 800px) {
   body {
     margin: 0 ;
-    height: 1380px;
+    height: 1200px;
   }
   header {
     flex-direction: column;
@@ -69,7 +69,10 @@ main {
     padding: 15px;
   }
   main {
+    display: flex;
+    flex-direction: column-reverse;
     grid-template-columns: 1fr;
+    margin: 16px;
   }
 }
 
@@ -183,7 +186,7 @@ transform: translate(0, 0);
 
   .ori {
     display: flex;
-    width: 80%;
+    width: 100%;
     position: relative;
     top: 30%;
     animation: moveOri 4s forwards alternate infinite ease;
